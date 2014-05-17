@@ -1,5 +1,14 @@
 <div ng-controller="linkController">
-<input ng-model='thing' />
+  <!-- search box -->
+  <input ng-model='thing' />
+
+  <!-- dropdown for filter by -->
+  <ul class="dropdown-menu">
+    <li ng-repeat="choice in items">
+      <a href>{{choice}}</a>
+    </li>
+  </ul>
+
   <div ng-repeat="link in links | filter:thing | orderBy:'visits':true" class="link fx-zoom-up fx-speed-600">
     <img src='client/redirect_icon.png'/>
     <div class='info'>
