@@ -1,0 +1,10 @@
+<div ng-controller="submitController" class="creator">
+  <form name="shorten" ng-submit="submit()" no-validate>
+      <input ng-model="text" class='text' type='url' name='url'>
+      <input type='submit' value='Shorten' ng-disabled='shorten.url.$invalid'>
+
+  </form>
+  <img ng-show="shouldShow" class='spinner' src='client/spiffygif_46x46.gif'>
+  <img class="panda fx-zoom-up fx-speed-300" src="http://thoughtsinlittleboxes.files.wordpress.com/2012/09/img_1678.jpg" ng-show='shorten.url.$invalid && shorten.url.$dirty'>
+  <div class='message'></div>
+</div>
