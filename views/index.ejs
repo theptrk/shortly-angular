@@ -10,24 +10,22 @@
 </script>
  -->
 
-<div ng-controller="linkController">
-  {{name}}
-  <div ng-repeat="link in links" class="link">
-    <img src='client/redirect_icon.png'/>
-    <div class='info'>
-      <div class='visits'><span class='count'>{{link.visits}}</span>Visits</div>
-      <div class='title'>{{link.title}}</div>
-      <div class='original'>{{link.uri}}</div>
-      <a href='{{link.base_url}}/{{link.code}}'>{{link.base_url}}/{{link.code}}</a>
-    </div>
-  </div>
+<div class='navigation'>
+  <ul>
+    <li><a href='#test' class='index'>All Links</a></li>
+    <li><a href='#create' class='create'>Shorten</a></li>
+  </ul>
+    <a href='/logout' class='logout'>Logout</a>
 </div>
 
-<div ng-controller="submitController">
+<div class='fx-bounce-right-big fx-speed-400 fx-easing-sine'ng-view></div>
+
+<!-- <div ng-controller="submitController">
   <form ng-submit="submit()">
       <input ng-model="text" class='text' type='text' name='url'>
       <input type='submit' value='Shorten'>
   </form>
-  <!-- <img class='spinner' src='client/spiffygif_46x46.gif'> -->
+  <img class='spinner' src='client/spiffygif_46x46.gif'>
   <div class='message'></div>
 </div>
+ -->

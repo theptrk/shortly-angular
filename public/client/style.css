@@ -115,7 +115,12 @@ form input[type=text], form input[type=password] {
   padding: 10px;
   margin: 0 10px;
 }
-
+input.ng-invalid {
+  background-color: #fee;
+  color: #a33;
+  padding: 10px;
+  margin: 0 10px;
+}
 .creator {
   height: 50px;
 }
@@ -129,9 +134,13 @@ form input[type=text], form input[type=password] {
   height: 46px;
   margin-bottom: 5px;
   padding: 10px;
-  display: none;
+  /*display: none;*/
 }
 
 .creator .message {
   clear: both;
+}
+
+.panda {
+  width: 350px;
 }
