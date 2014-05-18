@@ -1,7 +1,7 @@
 // ANGULEUR
 angular.module('myApp', ['ngRoute', 'ngAnimate', 'fx.animations'])
 
-.controller('linkController', function($scope, $http){
+.controller('linkController', ['$scope', '$http', function($scope, $http){
   $scope.name = "patrick"
   $http({
     method:'GET',
@@ -12,9 +12,9 @@ angular.module('myApp', ['ngRoute', 'ngAnimate', 'fx.animations'])
   }).error(function(data, status){
     console.log('error');
   });
-})
+}])
 
-.controller('submitController', function($scope, $http){
+.controller('submitController', ['$scope', '$http', function($scope, $http){
   $scope.shouldShow = false;
   $scope.submit = function(){
     console.log($scope.text);
@@ -30,7 +30,7 @@ angular.module('myApp', ['ngRoute', 'ngAnimate', 'fx.animations'])
       $scope.text = '';
     }).error(function(data, status){});
   };
-})
+}])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider
